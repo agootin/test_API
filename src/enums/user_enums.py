@@ -7,8 +7,8 @@ class Genders(Enum):
 
 
 class Statuses(Enum):
-    active = "active"
-    inactive = "inactive"
+    ACTIVE = "active"
+    INACTIVE = "inactive"
 
 
 class UserErrors(Enum):
