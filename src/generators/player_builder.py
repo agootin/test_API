@@ -1,11 +1,12 @@
 from src.enums.user_enums import Statuses
-from src.generators.player_localization import PlayerLocalization
+from src.generators.base_builder import BuilderBaseClass
+from src.generators.player_localization_builder import PlayerLocalizationBuilder
 
 
-class Player:
+class PlayerBuilder(BuilderBaseClass):
 
     def __init__(self):
-        self.result = {}
+        super().__init__()
         self.set_default_player()
 
     def set_status(self, status=Statuses.ACTIVE.value):
@@ -25,13 +26,7 @@ class Player:
         self.set_avatar()
         self.set_balance()
         self.result["localize"] = {
-                "en": PlayerLocalization("en_US").build(),
-                "ru": PlayerLocalization("ru_RU").build()
+                "en": PlayerLocalizationBuilder("en_US").build(),
+                "ru": PlayerLocalizationBuilder("ru_RU").build()
             }
 
-    def build(self):
-        return self.result
-
-
-z = Player().build()
-print(z)

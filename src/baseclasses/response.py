@@ -1,4 +1,3 @@
-# from jsonschema import validate
 from src.enums.global_enums import GlobalErrorMessages
 
 
