@@ -10,7 +10,7 @@ print(result)
 # print(result)
 
 
-# session.query(tables.Person).filter(tables.Person.person_id == 3).delete()
+# session.query(tables.Person).filter(tables.Person.person_id == 999999999).delete()
 # session.commit()
 
 

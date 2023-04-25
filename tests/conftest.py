@@ -1,6 +1,4 @@
 import pytest
-
-from random import randrange
 from src.generators.player_builder import PlayerBuilder
 
 from db import Session
@@ -9,11 +7,6 @@ from db import Session
 @pytest.fixture
 def get_player_generator():
     return PlayerBuilder()
-
-
-@pytest.fixture
-def get_number():
-    return randrange(1, 100, 5)
 
 
 @pytest.fixture
