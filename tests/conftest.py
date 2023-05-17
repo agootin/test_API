@@ -1,12 +1,6 @@
 import pytest
-from src.generators.player_builder import PlayerBuilder
 
 from db import Session
-
-
-@pytest.fixture
-def get_player_generator():
-    return PlayerBuilder()
 
 
 @pytest.fixture
